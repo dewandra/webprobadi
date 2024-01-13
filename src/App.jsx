@@ -1,12 +1,21 @@
-
 import "./App.css";
+import About from "./component/About";
+import Experience from "./component/Experience";
+import Home from "./component/Home";
+import Navbar from "./component/Navbar";
+import Portofolio from "./component/Portofolio";
+import Contact from "./component/Contact";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <div className="flex justify-center items-center h-screen font-myFont">
-        <p className="text-3xl font-extrabold">THIS WEBSITE IS CURRENTLY UNDER REPAIR!!!</p>
-      </div>
+      <Navbar />
+      <Home />
+      <About />
+      <Experience />
+      <Portofolio />
+      <Contact />
     </>
   );
 }
