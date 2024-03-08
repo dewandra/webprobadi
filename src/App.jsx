@@ -6,16 +6,18 @@ import Navbar from "./component/Navbar";
 import Portofolio from "./component/Portofolio";
 import Contact from "./component/Contact";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Maintanance from "./component/Maintanance";
 
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <Home />
       <About />
       <Experience />
       <Portofolio />
-      <Contact />
+      <Contact /> */}
+      <Maintanance />
     </>
   );
 }

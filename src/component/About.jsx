@@ -14,7 +14,7 @@ const About = () => {
             <p className="text-4xl md:text-6xl font-semibold text-black">
               Dewandra
             </p>
-            <p className="text-sm font-semibold text-gray-600 px-4 md:text-right md:ml-10">
+            <p className="text-sm font-semibold text-gray-600 px-4 md:text-right md:ml-10 md:pl-32">
               Saya adalah seorang mahasiswa tingkat akhir yang tengah menyelami
               dunia web development. Saat ini, fokus saya terletak pada
               eksplorasi kemampuan sebagai seorang web developer. Saya baru saja

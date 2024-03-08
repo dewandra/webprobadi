@@ -4,7 +4,7 @@ import portfolioData from "./portofolioData";
 
 const Portofolio = () => {
   return (
-    <div className="h-screen font-myFont" id="portofolio">
+    <div className="h-screen font-myFont" id="portofolio" >
       <p className="text-center text-4xl md:text-6xl font-semibold text-black">
         Portofolio
       </p>

@@ -7,7 +7,7 @@ const portfolioData = [
   {
     id: 2,
     url: "https://www.youtube.com/embed/pyf8cbqyfPs?si=outvu1K63vcdXPeL",
-    title: "LE SSERAFIM (르세라핌) 'ANTIFRAGILE' OFFICIAL M/V",
+    title: "ANTIFRAGILE 르세라핌 - LE SSERAFIM",
   },
 ];
 

@@ -42,16 +42,17 @@ const Experience = () => {
       id="experience"
     >
       <p className="text-4xl md:text-6xl font-semibold text-black mb-8">
-        Experience
+        Skill
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-3 outline outline-offset-3 outline-1 rounded-lg ">
+      <div className="grid grid-cols-2 md:grid-cols-3 md:px-28 md:py-10 outline outline-offset-3 outline-1 rounded-lg">
         {items.map((i) => (
           <div className="flex md:justify-center items-center gap-2 p-4">
             <span>
-              <FaRegCheckCircle size={25} />
+              <FaRegCheckCircle size={25}/>
             </span>
             <p
-              className="text-l md:text-2xl font-semibold text-gray-600"
+              className="text-l md:text-2xl font-semibold text-gray-600
+            "
               key={i.id}
             >
               {i.item}
