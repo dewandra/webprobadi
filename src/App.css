@@ -1,0 +1,7 @@
+.sticky-navbar {
+    position: fixed;
+    top: 0; /* Anda bisa menggunakan bottom: 0; jika ingin navbar di bagian bawah */
+    width: 100%;
+    z-index: 1000; /* Menentukan z-index agar navbar muncul di atas konten lain */
+  }
+  

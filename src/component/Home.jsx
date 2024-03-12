@@ -1,5 +1,6 @@
 import React from "react";
-import profile from "../assets/profile.png";
+import porfile from "../assets/porfile.png";
+import { Link } from "react-router-dom";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
         {/* =========== FOTO PROFILE =========== */}
         <div className="flex justify-center items-center mt-6 md:justify-end md:mt-24">
           <img
-            src={profile}
+            src={porfile}
             alt="gambar"
             className="rounded-full w-48 h-52 md:w-72 md:h-72"
           />
@@ -24,7 +25,7 @@ const Home = () => {
             Dewandra
           </p>
           <p className="text-xl md:text-2xl font-semibold text-gray-600">
-            Junior Web Developer
+            interested in web development
           </p>
         </div>
       </div>
@@ -35,13 +36,18 @@ const Home = () => {
           type="button"
           className="rounded-full py-1 md:py-2 px-3 md:px-5 outline hover:bg-black hover:text-white"
         >
-          Download CV
+          <a
+            href="https://drive.google.com/file/d/1kAlY8Pi72Zh9S1bkqeR09PbwuPhc5Apd/view?usp=sharing"
+            target="_blank"
+          >
+            Download CV
+          </a>
         </button>
         <button
           type="button"
           className="rounded-full py-1 md:py-2 px-3 md:px-5 outline hover:bg-black hover:text-white"
         >
-          Contact Info
+          <a href="#contact">Contact Info</a>
         </button>
       </div>
 
@@ -49,12 +55,18 @@ const Home = () => {
       <div className="font-myFont mt-6 mb-5 flex justify-center items-center gap-5 md:mt-4 md:mb-9">
         <button type="button" className="hover:scale-75 duration-200">
           <span>
-            <FaGithub size={30} className="md:size-11" />
+            <a href="https://github.com/dewandra" target="_blank">
+              {" "}
+              <FaGithub size={30} className="md:size-11" />{" "}
+            </a>
           </span>
         </button>
         <button type="button" className="hover:scale-75 duration-200">
           <span>
-            <FaLinkedin size={30} className="md:size-11" />
+            <a href="www.linkedin.com/in/dewandrarb" target="_blank">
+              {" "}
+              <FaLinkedin size={30} className="md:size-11" />
+            </a>
           </span>
         </button>
       </div>

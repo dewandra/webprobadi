@@ -11,13 +11,13 @@ import Maintanance from "./component/Maintanance";
 function App() {
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
       <Home />
       <About />
       <Experience />
       <Portofolio />
-      <Contact /> */}
-      <Maintanance />
+      <Contact />
+      {/* <Maintanance /> */}
     </>
   );
 }
