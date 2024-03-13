@@ -6,7 +6,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 const Home = () => {
   return (
     <>
-      <div className="font-myFont md:grid grid-cols-2 gap-14" id="home">
+      <div className="font-myFont mt-24 md:grid grid-cols-2 gap-14 md:mt-16" id="home">
         {/* =========== FOTO PROFILE =========== */}
         <div className="flex justify-center items-center mt-6 md:justify-end md:mt-24">
           <img
