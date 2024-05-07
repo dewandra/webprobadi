@@ -12,7 +12,7 @@ const Contact = () => {
           contact me.{" "}
         </p>
         <div className="flex text-l md:text-xl font-semibold text-black mt-10">
-          <a href="#">Twiter</a>
+          <a href="#">LinkedIn</a>
           <p className="mx-4">/</p>
           <a href="#">Dewandra</a>
         </div>
