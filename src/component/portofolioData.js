@@ -11,12 +11,12 @@ const portfolioData = [
    },
    {
      id: 3,
-     url: "https://www.youtube.com/embed/jd_lEsHDirM?si=P8PiFDyHi5gDiivF",
+     url: "https://www.youtube.com/embed/M4jjyOXuv7g?si=VmRsBgjBuzhJBxca",
      title: "Persuratan Digital - React Js & Express Js" ,
    },
    {
      id: 4,
-     url: "https://www.youtube.com/embed/J84ZTPegk5U?si=Y_PDIJ6W5yrplZm8",
+     url: "https://www.youtube.com/embed/blakrdTaCdw?si=sXDdoUpAb-4gT6vj",
      title: "Bakorwil III Malang - React Js & Express Js",
    },
 ];
