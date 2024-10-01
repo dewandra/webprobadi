@@ -19,6 +19,16 @@ const portfolioData = [
      url: "https://www.youtube.com/embed/blakrdTaCdw?si=sXDdoUpAb-4gT6vj",
      title: "Bakorwil III Malang - React Js & Express Js",
    },
+   {
+      id: 5,
+     url: "https://www.youtube.com/embed/FewK06BAWCU?si=MOrbJCHhuBMWKMYu",
+     title: "Laravel Rental Mobil",
+   },
+   {
+      id: 6,
+     url: "https://www.youtube.com/embed/zKJ-cAo7uhQ?si=3HyFeBLDOMkG1LNt",
+     title: "Laravel dashboard website dbnews",
+   }
 ];
 
 export default portfolioData;
