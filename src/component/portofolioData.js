@@ -28,7 +28,12 @@ const portfolioData = [
       id: 6,
      url: "https://www.youtube.com/embed/zKJ-cAo7uhQ?si=3HyFeBLDOMkG1LNt",
      title: "Laravel dashboard website dbnews",
-   }
+   },
+   {
+      id: 7,
+     url: "https://www.youtube.com/embed/qgxclUn250o?si=wcaweJk_15nOs2q0",
+     title: "Laravel POS APP",
+   },
 ];
 
 export default portfolioData;
