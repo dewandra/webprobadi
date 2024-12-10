@@ -1,7 +1,15 @@
-.sticky-navbar {
-    position: fixed;
-    top: 0; /* Anda bisa menggunakan bottom: 0; jika ingin navbar di bagian bawah */
-    width: 100%;
-    z-index: 1000; /* Menentukan z-index agar navbar muncul di atas konten lain */
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-myFont {
+  font-family: 'Roboto', sans-serif;
+}

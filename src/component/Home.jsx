@@ -1,76 +1,65 @@
 import React from "react";
 import porfile from "../assets/porfile.png";
-import { Link } from "react-router-dom";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <>
-      <div className="font-myFont mt-24 md:grid grid-cols-2 gap-14 md:mt-16" id="home">
-        {/* =========== FOTO PROFILE =========== */}
-        <div className="flex justify-center items-center mt-6 md:justify-end md:mt-24">
+    <div id="home" className="font-myFont bg-gray-200 py-10 min-h-screen flex justify-center items-center pt-16">
+      <div className="md:grid grid-cols-2 gap-12 px-6 md:px-16">
+        {/* PROFILE PICTURE */}
+        <div className="flex justify-center items-center mb-10 md:mb-0">
           <img
             src={porfile}
-            alt="gambar"
-            className="rounded-full w-48 h-52 md:w-72 md:h-72"
+            alt="Dewandra's profile"
+            className="rounded-full w-52 h-52 md:w-72 md:h-72 shadow-xl transform transition-transform duration-300 hover:scale-105"
           />
         </div>
 
-        {/* =========== INTRODUCTION =========== */}
-        <div className="text-center mt-4 md:flex flex-col justify-center items-start md:mt-32">
-          <p className="text-xl md:text-2xl font-semibold text-gray-600">
-            Hello, I'm
+        {/* INTRODUCTION */}
+        <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start">
+          <p className="text-lg md:text-xl font-medium text-gray-700 mb-2">Hello, I'm</p>
+          <p className="text-3xl md:text-5xl font-extrabold text-gray-800 mb-2">Dewandra</p>
+          <p className="text-lg md:text-xl font-medium text-gray-600 mb-6">
+          I am a passionate Web Developer focused on building clean, functional websites that offer great user experiences and meet business goals..
           </p>
-          <p className="text-4xl md:text-6xl font-semibold text-black">
-            Dewandra
-          </p>
-          <p className="text-xl md:text-2xl font-semibold text-gray-600">
-            interested in web development
-          </p>
+
+          {/* BUTTONS */}
+          <div className="flex justify-center items-center gap-6 mb-8">
+            <a
+              href="https://drive.google.com/file/d/1kAlY8Pi72Zh9S1bkqeR09PbwuPhc5Apd/view?usp=sharing"
+              target="_blank"
+              className="rounded-full py-2 px-6 bg-gray-800 text-white font-semibold text-lg transform transition duration-300 hover:bg-gray-600 hover:scale-105"
+            >
+              Download CV
+            </a>
+            <a
+              href="#contact"
+              className="rounded-full py-2 px-6 border-2 border-gray-800 text-gray-800 font-semibold text-lg transform transition duration-300 hover:bg-gray-800 hover:text-white hover:scale-105"
+            >
+              Contact Info
+            </a>
+          </div>
+
+          {/* SOCIAL LINKS */}
+          <div className="flex justify-center items-center gap-6 mt-6">
+            <a
+              href="https://github.com/dewandra"
+              target="_blank"
+              className="hover:scale-110 duration-200 transform"
+            >
+              <FaGithub size={40} className="text-gray-800 hover:text-black transition-colors duration-300" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dewandrarb"
+              target="_blank"
+              className="hover:scale-110 duration-200 transform"
+            >
+              <FaLinkedin size={40} className="text-gray-600 hover:text-black transition-colors duration-300" />
+            </a>
+          </div>
         </div>
       </div>
-
-      {/* =========== BUTTON DOWNLOAD CV & CONTACT INFO =========== */}
-      <div className="font-myFont mt-6 flex justify-center items-center gap-5 md:mt-14">
-        <button
-          type="button"
-          className="rounded-full py-1 md:py-2 px-3 md:px-5 outline hover:bg-black hover:text-white"
-        >
-          <a
-            href="https://drive.google.com/file/d/1kAlY8Pi72Zh9S1bkqeR09PbwuPhc5Apd/view?usp=sharing"
-            target="_blank"
-          >
-            Download CV
-          </a>
-        </button>
-        <button
-          type="button"
-          className="rounded-full py-1 md:py-2 px-3 md:px-5 outline hover:bg-black hover:text-white"
-        >
-          <a href="#contact">Contact Info</a>
-        </button>
-      </div>
-
-      {/* =========== BUTTON GITHUB & LINKEDIN =========== */}
-      <div className="font-myFont mt-6 mb-5 flex justify-center items-center gap-5 md:mt-4 md:mb-9">
-        <button type="button" className="hover:scale-75 duration-200">
-          <span>
-            <a href="https://github.com/dewandra" target="_blank">
-              {" "}
-              <FaGithub size={30} className="md:size-11" />{" "}
-            </a>
-          </span>
-        </button>
-        <button type="button" className="hover:scale-75 duration-200">
-          <span>
-            <a href="www.linkedin.com/in/dewandrarb" target="_blank">
-              {" "}
-              <FaLinkedin size={30} className="md:size-11" />
-            </a>
-          </span>
-        </button>
-      </div>
-    </>
+    </div>
   );
 };
 

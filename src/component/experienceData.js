@@ -1,11 +1,7 @@
 const experienceData = [
     {
       id: 1,
-      item: "HTML",
-    },
-    {
-      id: 2,
-      item: "CSS",
+      item: "Wordpress",
     },
     {
       id: 3,
