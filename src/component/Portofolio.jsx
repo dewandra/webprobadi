@@ -3,7 +3,7 @@ import portfolioData from "./portofolioData";
 
 const Portfolio = () => {
   return (
-    <div className="h-auto font-myFont py-10" id="portfolio">
+    <div className="bg-gray-200 h-auto font-myFont py-10" id="portfolio">
       <p className="text-center text-4xl md:text-6xl font-semibold text-gray-800 mb-12">Portfolio</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-4 md:p-8">
         {portfolioData.map((item) => (
