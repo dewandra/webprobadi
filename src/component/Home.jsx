@@ -52,7 +52,7 @@ const Home = () => {
             <a
               href="https://www.linkedin.com/in/dewandrarb"
               target="_blank"
-              className="hover:scale-110 duration-200 transform"
+              className="hover:scale-110 duration-200 transform text-gray-800"
             >
               <FaLinkedin size={40} className="text-gray-600 hover:text-black transition-colors duration-300" />
             </a>
