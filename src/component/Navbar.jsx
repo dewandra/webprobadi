@@ -2,20 +2,22 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
+  // Tambahkan tautan baru di sini
   const items = [
     { id: 1, item: "Home", link: "#home" },
     { id: 2, item: "About", link: "#about" },
-    { id: 3, item: "Experience", link: "#experience" },
+    { id: 3, item: "Clients", link: "#clients" },
     { id: 4, item: "Portfolio", link: "#portfolio" },
-    { id: 5, item: "Contact", link: "#contact" },
+    { id: 5, item: "Gallery", link: "#gallery" },
+    { id: 6, item: "Contact", link: "#contact" },
   ];
 
-  const [nav, setNav] = useState(false); // Controls mobile menu visibility
-  const [isSticky, setIsSticky] = useState(false); // Sticky navbar effect
+  const [nav, setNav] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 10) {
         setIsSticky(true);
       } else {
         setIsSticky(false);
@@ -23,63 +25,40 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div
-      className={`flex justify-between items-center w-full h-16 fixed top-0 left-0 right-0 transition-all ease-in-out duration-300 z-30 px-4 ${
-        isSticky ? "bg-gray-800 text-white shadow-lg" : "bg-transparent text-gray-800"
+      className={`flex justify-between items-center w-full h-20 fixed top-0 left-0 right-0 transition-all ease-in-out duration-300 z-50 px-8 ${
+        isSticky ? "bg-card shadow-lg" : "bg-transparent"
       }`}
     >
-      {/* Logo */}
-      <div className="ml-6">
-        <h1
-          className={`text-3xl font-semibold capitalize transition-all duration-300 ${
-            isSticky ? "text-white" : "text-black"
-          }`}
-        >
+      <div>
+        <h1 className="text-4xl font-heading capitalize text-primary-accent">
           Dewandra
         </h1>
       </div>
 
-      {/* Desktop Menu */}
-      <ul className={`md:flex hidden space-x-8 mr-5 ${isSticky ? "text-white" : "text-black"}`}>
+      <ul className="hidden md:flex space-x-8 items-center">
         {items.map((i) => (
-          <li
-            key={i.id}
-            className={`capitalize font-medium hover:text-gray-400 cursor-pointer transition duration-300 ${
-              i.item === "Contact" ? "mr-8" : ""
-            }`}
-          >
+          <li key={i.id} className="capitalize font-body font-medium text-text-light hover:text-secondary-accent cursor-pointer transition-colors duration-300">
             <a href={i.link}>{i.item}</a>
           </li>
         ))}
       </ul>
 
-      {/* Mobile Menu Button */}
       <div
-        onClick={() => setNav(!nav)} // Toggle the nav state on click
-        className="cursor-pointer text-white pr-4 hover:text-gray-400 duration-200 md:hidden z-40"
+        onClick={() => setNav(!nav)}
+        className="cursor-pointer text-text-light pr-4 hover:text-secondary-accent duration-200 md:hidden z-50"
       >
-        {nav ? (
-          <FaTimes size={30} /> // Show the close icon when the menu is open
-        ) : (
-          <FaBars size={30} className={isSticky ? "text-white" : "text-black"} /> // Corrected className
-        )}
+        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
 
-      {/* Mobile Menu */}
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gray-800 text-white space-y-8 pt-16 z-30">
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-background text-text-light space-y-8 z-40">
           {items.map((i) => (
-            <li
-              key={i.id}
-              className="text-2xl capitalize font-medium transition duration-300 hover:text-gray-400 cursor-pointer"
-            >
+            <li key={i.id} onClick={() => setNav(false)} className="text-2xl capitalize font-body font-medium transition duration-300 hover:text-secondary-accent cursor-pointer">
               <a href={i.link}>{i.item}</a>
             </li>
           ))}

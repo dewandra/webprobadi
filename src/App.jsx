@@ -5,20 +5,21 @@ import Home from "./component/Home";
 import Navbar from "./component/Navbar";
 import Portofolio from "./component/Portofolio";
 import Contact from "./component/Contact";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Maintanance from "./component/Maintanance";
+import Clients from "./component/Clients";
+import Gallery from "./component/Gallery";
 
 function App() {
   return (
-    <>
+    <div className="font-body bg-background">
       <Navbar />
       <Home />
       <About />
+      <Clients />      {/* <-- Tambahkan di sini */}
       <Experience />
       <Portofolio />
+      <Gallery />      {/* <-- Tambahkan di sini */}
       <Contact />
-      {/* <Maintanance /> */}
-    </>
+    </div>
   );
 }
 

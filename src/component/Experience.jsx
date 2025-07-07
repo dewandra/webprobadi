@@ -1,67 +1,42 @@
 import React from "react";
-import { FaReact, FaNodeJs, FaLaravel, FaWordpress, FaCss3Alt, FaHtml5, FaBootstrap, FaServer } from "react-icons/fa";
 import experienceData from "./experienceData";
+import { FaReact, FaNodeJs, FaLaravel, FaWordpress, FaJs, FaCss3Alt, FaBootstrap, FaServer } from "react-icons/fa";
+
+const SkillCategory = ({ title, skills }) => (
+  <div className="bg-card p-8 rounded-lg">
+    <h3 className="text-2xl font-bold font-heading text-primary-accent mb-6">{title}</h3>
+    <ul className="space-y-4">
+      {skills.map(skill => (
+        <li key={skill.id} className="text-lg text-text-light/90 border-b border-muted-text/30 pb-2">
+          {skill.item}
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 
 const Experience = () => {
+  const frontendSkills = experienceData.filter(skill => ["React Js", "Javascript", "Tailwind", "Bootstrap"].includes(skill.item));
+  const backendSkills = experienceData.filter(skill => ["Laravel", "Node Js", "Express Js"].includes(skill.item));
+  const cmsSkills = experienceData.filter(skill => ["Wordpress"].includes(skill.item));
+
   return (
-    <div
-      className="flex flex-col justify-center items-center min-h-screen font-myFont bg-gray-200 py-10"
-      id="experience"  
-    >
-      <p className="text-4xl md:text-6xl font-semibold text-gray-800 mb-8 text-center">
-        Skills & Expertise
-      </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 md:px-20">
-        {experienceData.map((i) => (
-          <div
-            key={i.id}
-            className="group relative flex flex-col justify-center items-center p-6 bg-white border border-gray-200 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl hover:shadow-gray-500"
-          >
-            <div className="mb-4 p-2 bg-black text-white rounded-full">
-              {i.item === "React Js" && <FaReact size={30} />}
-              {i.item === "Node Js" && <FaNodeJs size={30} />}
-              {i.item === "Laravel" && <FaLaravel size={30} />}
-              {i.item === "Wordpress" && <FaWordpress size={30} />}
-              {i.item === "Javascript" && <FaHtml5 size={30} />}
-              {i.item === "Tailwind" && <FaCss3Alt size={30} />}
-              {i.item === "Bootstrap" && <FaBootstrap size={30} />}
-              {i.item === "Express Js" && <FaServer size={30} />}
-            </div>
-
-            <p className="text-xl md:text-2xl font-semibold text-gray-800 text-center mb-4">{i.item}</p>
-
-            <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
-              <div className={`h-2 rounded-full ${getSkillProgress(i.item)}`}></div>
-            </div>
-          </div>
-        ))}
+    <div className="bg-background py-20 md:py-32 font-body" id="experience">
+      <div className="container mx-auto px-6 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold font-heading text-primary-accent mb-4">
+          Keahlian & Teknologi
+        </h2>
+        <p className="text-lg text-muted-text mb-12 max-w-2xl mx-auto">
+          Teknologi yang saya gunakan untuk mengubah ide menjadi produk digital yang nyata.
+        </p>
+        <div className="grid md:grid-cols-3 gap-8 text-left">
+          <SkillCategory title="Frontend" skills={frontendSkills} />
+          <SkillCategory title="Backend" skills={backendSkills} />
+          <SkillCategory title="CMS" skills={cmsSkills} />
+        </div>
       </div>
     </div>
   );
-};
-
-const getSkillProgress = (skill) => {
-  switch (skill) {
-    case "Wordpress":
-      return "bg-black w-40";
-    case "Javascript":
-      return "bg-black w-64";
-    case "Bootstrap":
-      return "bg-black w-64";
-    case "Tailwind":
-      return "bg-black w-40";
-    case "Node Js":
-      return "bg-black w-64";
-    case "Express Js":
-      return "bg-black w-64";
-    case "React Js":
-      return "bg-black w-40";
-    case "Laravel":
-      return "bg-black w-72";
-    default:
-      return "bg-gray-400 w-50";
-  }
 };
 
 export default Experience;
