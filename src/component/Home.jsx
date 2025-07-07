@@ -1,61 +1,43 @@
 import React from "react";
-import porfile from "../assets/porfile.png";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import profileImage from "../assets/fotogueh.jpg";
 
 const Home = () => {
   return (
-    <div id="home" className="font-myFont bg-gray-200 py-10 min-h-screen flex justify-center items-center pt-16">
-      <div className="md:grid grid-cols-2 gap-12 px-6 md:px-16">
-        {/* PROFILE PICTURE */}
-        <div className="flex justify-center items-center mb-10 md:mb-0">
-          <img
-            src={porfile}
-            alt="Dewandra's profile"
-            className="rounded-full w-52 h-52 md:w-72 md:h-72 shadow-xl transform transition-transform duration-300 hover:scale-105"
-          />
-        </div>
-
-        {/* INTRODUCTION */}
-        <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start">
-          <p className="text-lg md:text-xl font-medium text-gray-700 mb-2">Hello, I'm</p>
-          <p className="text-3xl md:text-5xl font-extrabold text-gray-800 mb-2">Dewandra</p>
-          <p className="text-lg md:text-xl font-medium text-gray-600 mb-6">
-          I am a passionate Web Developer focused on building clean, functional websites that offer great user experiences and meet business goals..
+    <div id="home" className="bg-background min-h-screen flex items-center font-body text-text-light">
+      <div className="container mx-auto grid md:grid-cols-2 items-center gap-12 px-6">
+        <div className="text-center md:text-left">
+          <p className="text-xl md:text-2xl text-secondary-accent font-heading mb-3">Halo, saya Dewandra.</p>
+          <h1 className="text-5xl md:text-7xl text-primary-accent font-bold font-heading mb-6 leading-tight">
+            Web Developer & <br />UI Enthusiast
+          </h1>
+          <p className="text-lg text-text-light/80 mb-10 max-w-xl mx-auto md:mx-0">
+            Saya membangun situs web yang bersih dan fungsional dengan pengalaman pengguna yang luar biasa untuk mencapai tujuan bisnis Anda.
           </p>
-
-          {/* BUTTONS */}
-          <div className="flex justify-center items-center gap-6 mb-8">
+          <div className="flex justify-center md:justify-start gap-4">
             <a
-              href="https://drive.google.com/file/d/1kAlY8Pi72Zh9S1bkqeR09PbwuPhc5Apd/view?usp=sharing"
-              target="_blank"
-              className="rounded-full py-2 px-6 bg-gray-800 text-white font-semibold text-lg transform transition duration-300 hover:bg-gray-600 hover:scale-105"
+              href="#portfolio"
+              className="rounded-lg py-3 px-8 bg-primary-accent text-background font-bold font-heading transition-transform duration-300 hover:scale-105"
             >
-              Download CV
+              Lihat Portofolio
             </a>
             <a
-              href="#contact"
-              className="rounded-full py-2 px-6 border-2 border-gray-800 text-gray-800 font-semibold text-lg transform transition duration-300 hover:bg-gray-800 hover:text-white hover:scale-105"
+              href="https://github.com/dewandra" target="_blank" rel="noopener noreferrer"
+              className="p-3 border-2 border-secondary-accent rounded-lg text-secondary-accent transition-colors duration-300 hover:bg-secondary-accent hover:text-background"
             >
-              Contact Info
+              <FaGithub size={28} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dewandrarb" target="_blank" rel="noopener noreferrer"
+              className="p-3 border-2 border-secondary-accent rounded-lg text-secondary-accent transition-colors duration-300 hover:bg-secondary-accent hover:text-background"
+            >
+              <FaLinkedin size={28} />
             </a>
           </div>
-
-          {/* SOCIAL LINKS */}
-          <div className="flex justify-center items-center gap-6 mt-6">
-            <a
-              href="https://github.com/dewandra"
-              target="_blank"
-              className="hover:scale-110 duration-200 transform"
-            >
-              <FaGithub size={40} className="text-gray-800 hover:text-black transition-colors duration-300" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/dewandrarb"
-              target="_blank"
-              className="hover:scale-110 duration-200 transform text-gray-800"
-            >
-              <FaLinkedin size={40} className="text-gray-600 hover:text-black transition-colors duration-300" />
-            </a>
+        </div>
+        <div className="flex justify-center">
+          <div className="w-80 h-80 md:w-[450px] md:h-[450px] bg-card rounded-lg">
+            <img src={profileImage} alt="Potret Dewandra dengan cahaya api" className="w-full h-full object-cover rounded-lg"/>
           </div>
         </div>
       </div>

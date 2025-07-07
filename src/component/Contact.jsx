@@ -3,23 +3,20 @@ import React from "react";
 const Contact = () => {
   return (
     <>
-      <div className="bg-gray-200 h-screen flex flex-col justify-center items-center font-myFont" id="contact">
-        <p className="text-center text-4xl md:text-6xl font-semibold text-black">
-          Contact
+      <div className="bg-background flex flex-col justify-center items-center font-body text-text-light text-center py-20 md:py-32" id="contact">
+        <h2 className="text-4xl md:text-5xl font-bold font-heading text-primary-accent mb-4">
+          Hubungi Saya
+        </h2>
+        <p className="text-lg text-text-light/80 mt-4 max-w-2xl mx-auto mb-8">
+          Saya selalu terbuka untuk diskusi, kolaborasi, atau sekadar menyapa. Jangan ragu untuk menghubungi saya.
         </p>
-        <p className="text-xl md:text-2xl font-semibold text-gray-600 mt-10 text-center">
-          Thank you for visiting my portfolio website, please feel free to
-          contact me.{" "}
-        </p>
-        <div className="flex text-l md:text-xl font-semibold text-black mt-10">
-          <a href="#">LinkedIn</a>
-          <p className="mx-4">/</p>
-          <a href="#">Dewandra</a>
-        </div>
+        <a href="mailto:email.anda@contoh.com" className="rounded-lg py-3 px-8 bg-primary-accent text-background font-bold font-heading transition-transform duration-300 hover:scale-105">
+          Kirim Email
+        </a>
       </div>
-      <p className="relative abosulute bottom-0 text-center ">
-        &copy; 2023 Dewandra
-      </p>
+      <footer className="bg-card text-center py-5">
+        <p className="text-muted-text font-body">&copy; 2025 Dewandra</p>
+      </footer>
     </>
   );
 };
