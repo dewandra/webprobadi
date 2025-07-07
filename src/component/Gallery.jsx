@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import galleryData from './galleryData';
+import galeryData from './galeryData';
 
 const Gallery = () => {
   // 1. State untuk melacak jumlah gambar yang ditampilkan
@@ -35,7 +35,7 @@ const Gallery = () => {
       </div>
 
       {/* 4. Tampilkan tombol "Load More" jika masih ada gambar tersembunyi */}
-      {visibleItems < galleryData.length && (
+      {visibleItems < galeryData.length && (
         <div className="text-center mt-12">
           <button
             onClick={loadMore}
