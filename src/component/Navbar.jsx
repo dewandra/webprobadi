@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-  // Tambahkan tautan baru di sini
   const items = [
     { id: 1, item: "Home", link: "#home" },
     { id: 2, item: "About", link: "#about" },
@@ -42,7 +41,7 @@ const Navbar = () => {
 
       <ul className="hidden md:flex space-x-8 items-center">
         {items.map((i) => (
-          <li key={i.id} className="capitalize font-body font-medium text-text-light hover:text-secondary-accent cursor-pointer transition-colors duration-300">
+          <li key={i.id} className="capitalize font-body font-medium text-text-light hover:text-primary-accent cursor-pointer transition-colors duration-300">
             <a href={i.link}>{i.item}</a>
           </li>
         ))}
@@ -50,7 +49,7 @@ const Navbar = () => {
 
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer text-text-light pr-4 hover:text-secondary-accent duration-200 md:hidden z-50"
+        className="cursor-pointer text-text-light pr-4 hover:text-primary-accent duration-200 md:hidden z-50"
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
@@ -58,7 +57,7 @@ const Navbar = () => {
       {nav && (
         <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-background text-text-light space-y-8 z-40">
           {items.map((i) => (
-            <li key={i.id} onClick={() => setNav(false)} className="text-2xl capitalize font-body font-medium transition duration-300 hover:text-secondary-accent cursor-pointer">
+            <li key={i.id} onClick={() => setNav(false)} className="text-2xl capitalize font-body font-medium transition duration-300 hover:text-primary-accent cursor-pointer">
               <a href={i.link}>{i.item}</a>
             </li>
           ))}
