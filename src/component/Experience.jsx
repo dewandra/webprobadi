@@ -1,13 +1,12 @@
 import React from "react";
 import experienceData from "./experienceData";
-import { FaReact, FaNodeJs, FaLaravel, FaWordpress, FaJs, FaCss3Alt, FaBootstrap, FaServer } from "react-icons/fa";
 
 const SkillCategory = ({ title, skills }) => (
   <div className="bg-card p-8 rounded-lg">
     <h3 className="text-2xl font-bold font-heading text-primary-accent mb-6">{title}</h3>
     <ul className="space-y-4">
       {skills.map(skill => (
-        <li key={skill.id} className="text-lg text-text-light/90 border-b border-muted-text/30 pb-2">
+        <li key={skill.id} className="text-lg text-text-light border-b border-muted-text/30 pb-2">
           {skill.item}
         </li>
       ))}
@@ -16,6 +15,7 @@ const SkillCategory = ({ title, skills }) => (
 );
 
 const Experience = () => {
+  // ... (sisa kode sama)
   const frontendSkills = experienceData.filter(skill => ["React Js", "Javascript", "Tailwind", "Bootstrap"].includes(skill.item));
   const backendSkills = experienceData.filter(skill => ["Laravel", "Node Js", "Express Js"].includes(skill.item));
   const cmsSkills = experienceData.filter(skill => ["Wordpress"].includes(skill.item));

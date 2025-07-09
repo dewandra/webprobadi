@@ -12,13 +12,13 @@ const About = () => {
           <div className="md:col-span-3">
             <p className="font-heading text-muted-text text-lg mb-2">Perkenalan</p>
             <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4 text-primary-accent">Tentang Saya</h2>
-            <p className="text-lg text-text-light/80 mb-6 leading-relaxed">
+            <p className="text-lg text-text-light mb-6 leading-relaxed">
               Saya adalah lulusan baru Sistem Informasi dengan hasrat untuk mengembangkan situs web yang menarik dan fungsional. Setiap proyek mencerminkan dedikasi saya untuk memberikan solusi inovatif.
             </p>
             <a
               href="https://drive.google.com/file/d/1kAlY8Pi72Zh9S1bkqeR09PbwuPhc5Apd/view?usp=sharing"
               target="_blank" rel="noopener noreferrer"
-              className="inline-block rounded-lg py-3 px-6 bg-primary-accent text-background font-bold font-heading transition-transform duration-300 hover:scale-105"
+              className="inline-block rounded-lg py-3 px-6 bg-primary-accent text-background font-bold font-heading transition-transform duration-300 hover:bg-secondary-accent hover:scale-105"
             >
               Unduh CV Saya
             </a>
