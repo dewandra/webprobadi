@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'background': '#1a1a1a',      // Abu-abu sangat gelap, lebih nyaman di mata
-        'card': '#2c2c2c',            // Warna kartu yang sedikit lebih terang
-        'primary-accent': '#ff76d8',  // Pink cerah untuk elemen utama (tombol, judul)
-        'secondary-accent': '#ffa6fc',// Pink lebih muda untuk hover atau aksen sekunder
-        'muted-text': '#a3a3a3',      // Abu-abu muda untuk sub-teks
-        'text-light': '#f5f5f5',       // Putih gading untuk teks utama, kontras tinggi
+        'background': '#000000',      // Hitam pekat untuk latar belakang
+        'card': '#404040',            // Abu-abu gelap untuk elemen kartu
+        'primary-accent': '#c0c0c0',  // Abu-abu terang sebagai aksen utama
+        'secondary-accent': '#808080',// Abu-abu sebagai aksen sekunder
+        'muted-text': '#808080',      // Abu-abu untuk sub-teks
+        'text-light': '#ffffff',       // Putih untuk teks utama
       },
       fontFamily: {
         heading: ['Poppins', 'sans-serif'],
