@@ -1,32 +1,32 @@
-import React from "react";
-import aboutImage from "../assets/fototentanggueh.jpg";
-
-const About = () => {
+export default function About() {
   return (
-    <div id="about" className="bg-card py-20 md:py-32 font-body text-text-light">
-      <div className="container mx-auto px-6 relative">
-        <div className="grid md:grid-cols-5 gap-10 items-center">
-          <div className="md:col-span-2 flex justify-center">
-            <img src={aboutImage} alt="Tampilan kode di editor" className="rounded-lg shadow-2xl w-full"/>
-          </div>
-          <div className="md:col-span-3">
-            <p className="font-heading text-muted-text text-lg mb-2">Perkenalan</p>
-            <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4 text-primary-accent">Tentang Saya</h2>
-            <p className="text-lg text-text-light mb-6 leading-relaxed">
-              Saya adalah lulusan baru Sistem Informasi dengan hasrat untuk mengembangkan situs web yang menarik dan fungsional. Setiap proyek mencerminkan dedikasi saya untuk memberikan solusi inovatif.
-            </p>
-            <a
-              href="https://drive.google.com/file/d/1kAlY8Pi72Zh9S1bkqeR09PbwuPhc5Apd/view?usp=sharing"
-              target="_blank" rel="noopener noreferrer"
-              className="inline-block rounded-lg py-3 px-6 bg-primary-accent text-background font-bold font-heading transition-transform duration-300 hover:bg-secondary-accent hover:scale-105"
-            >
-              Unduh CV Saya
-            </a>
-          </div>
+    <section id="tentang" className="py-24 md:py-32 grid md:grid-cols-2 gap-16 max-w-6xl mx-auto px-6">
+      <div className="space-y-6">
+        <p className="text-sm font-mono uppercase tracking-widest text-brand">01 &middot; Tentang</p>
+        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Bukan cuma soal ngetik kode.</h2>
+        <div className="space-y-4 text-lg text-ink/60 leading-relaxed">
+          <p>Lulusan Sistem Informasi yang hobi ngoding sejak semester dua. Saya nggak cuma bikin web yang sekadar jadi &mdash; tapi juga mikirin performa dan struktur kode biar gampang di-maintain.</p>
+          <p>Suka eksplorasi ekosistem React, dan kalau lagi nggak di depan VS Code, biasanya lagi ngoprek UI di Figma atau cari inspirasi visual di luar.</p>
         </div>
       </div>
-    </div>
+      <div className="grid grid-cols-2 gap-4 self-center">
+        <div className="p-6 bg-subtle rounded-2xl">
+          <div className="text-4xl font-extrabold text-brand mb-1">15+</div>
+          <div className="text-xs font-mono uppercase text-ink/50 tracking-wider">Project Selesai</div>
+        </div>
+        <div className="p-6 bg-subtle rounded-2xl">
+          <div className="text-4xl font-extrabold text-brand mb-1">3.9</div>
+          <div className="text-xs font-mono uppercase text-ink/50 tracking-wider">IPK Terakhir</div>
+        </div>
+        <div className="p-6 bg-subtle rounded-2xl">
+          <div className="text-4xl font-extrabold text-brand mb-1">S.Kom</div>
+          <div className="text-xs font-mono uppercase text-ink/50 tracking-wider">Sistem Informasi</div>
+        </div>
+        <div className="p-6 bg-subtle rounded-2xl">
+          <div className="text-4xl font-extrabold text-brand mb-1">Full</div>
+          <div className="text-xs font-mono uppercase text-ink/50 tracking-wider">Stack Focus</div>
+        </div>
+      </div>
+    </section>
   );
-};
-
-export default About;
+}

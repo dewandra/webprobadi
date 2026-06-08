@@ -1,24 +1,17 @@
-import React from "react";
-
-const Contact = () => {
+export default function Contact() {
   return (
-    <>
-      <div className="bg-background flex flex-col justify-center items-center font-body text-text-light text-center py-20 md:py-32" id="contact">
-        <h2 className="text-4xl md:text-5xl font-bold font-heading text-primary-accent mb-4">
-          Hubungi Saya
-        </h2>
-        <p className="text-lg text-text-light/80 mt-4 max-w-2xl mx-auto mb-8">
-          Saya selalu terbuka untuk diskusi, kolaborasi, atau sekadar menyapa. Jangan ragu untuk menghubungi saya.
-        </p>
-        <a href="mailto:email.anda@contoh.com" className="rounded-lg py-3 px-8 bg-primary-accent text-background font-bold font-heading transition-transform duration-300 hover:scale-105">
-          Kirim Email
-        </a>
+    <section id="kontak" className="py-32 md:py-40 border-t border-ink/5 text-center space-y-12 max-w-6xl mx-auto px-6">
+      <div className="space-y-5">
+        <p className="text-sm font-mono uppercase tracking-widest text-brand">04 &middot; Ayo Ngobrol</p>
+        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-2xl mx-auto text-balance">Punya ide project? Mari eksekusi bareng.</h2>
+        <p className="text-lg text-ink/60 max-w-md mx-auto">Email saya terbuka lebar &mdash; buat kerja sama, freelance, atau sekadar nanya.</p>
       </div>
-      <footer className="bg-card text-center py-5">
-        <p className="text-muted-text font-body">&copy; 2025 Dewandra</p>
-      </footer>
-    </>
+      <a href="mailto:email.anda@contoh.com" className="inline-block text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter hover:text-brand transition-colors break-all">dewandrarb@gmail.com</a>
+      <div className="flex justify-center gap-8 text-sm font-mono uppercase tracking-widest text-ink/60">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-ink transition-colors">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-ink transition-colors">LinkedIn</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-ink transition-colors">Instagram</a>
+      </div>
+    </section>
   );
-};
-
-export default Contact;
+}

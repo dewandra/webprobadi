@@ -1,24 +1,24 @@
 import "./App.css";
-import About from "./component/About";
-import Experience from "./component/Experience";
-import Home from "./component/Home";
 import Navbar from "./component/Navbar";
+import Home from "./component/Home";
+import About from "./component/About";
 import Portofolio from "./component/Portofolio";
-import Contact from "./component/Contact";
-import Clients from "./component/Clients";
 import Gallery from "./component/Gallery";
+import Contact from "./component/Contact";
+import Footer from "./component/Footer";
 
 function App() {
   return (
-    <div className="font-body bg-background">
+    <div className="bg-surface text-ink font-sans antialiased">
       <Navbar />
-      <Home />
-      <About />
-      <Clients />      {/* <-- Tambahkan di sini */}
-      <Experience />
-      <Portofolio />
-      <Gallery />      {/* <-- Tambahkan di sini */}
-      <Contact />
+      <main>
+        <Home />
+        <About />
+        <Portofolio />
+        <Gallery />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }

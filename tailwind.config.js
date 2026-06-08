@@ -1,19 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        'background': '#000000',      // Hitam pekat untuk latar belakang
-        'card': '#404040',            // Abu-abu gelap untuk elemen kartu
-        'primary-accent': '#c0c0c0',  // Abu-abu terang sebagai aksen utama
-        'secondary-accent': '#808080',// Abu-abu sebagai aksen sekunder
-        'muted-text': '#808080',      // Abu-abu untuk sub-teks
-        'text-light': '#ffffff',       // Putih untuk teks utama
+        surface: 'rgb(var(--color-surface) / <alpha-value>)',
+        ink: 'rgb(var(--color-ink) / <alpha-value>)',
+        brand: 'rgb(var(--color-brand) / <alpha-value>)',
+        subtle: 'rgb(var(--color-subtle) / <alpha-value>)',
       },
       fontFamily: {
-        heading: ['Poppins', 'sans-serif'],
-        body: ['Roboto', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
       animation: {
         marquee: 'marquee 30s linear infinite',

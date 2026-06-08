@@ -1,70 +1,25 @@
-import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import ThemeToggle from "./ThemeToggle";
 
-const Navbar = () => {
-  const items = [
-    { id: 1, item: "Home", link: "#home" },
-    { id: 2, item: "About", link: "#about" },
-    { id: 3, item: "Clients", link: "#clients" },
-    { id: 4, item: "Portfolio", link: "#portfolio" },
-    { id: 5, item: "Gallery", link: "#gallery" },
-    { id: 6, item: "Contact", link: "#contact" },
-  ];
-
-  const [nav, setNav] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+export default function Navbar() {
   return (
-    <div
-      className={`flex justify-between items-center w-full h-20 fixed top-0 left-0 right-0 transition-all ease-in-out duration-300 z-50 px-8 ${
-        isSticky ? "bg-card shadow-lg" : "bg-transparent"
-      }`}
-    >
-      <div>
-        <h1 className="text-4xl font-heading capitalize text-primary-accent">
-          Dewandra
-        </h1>
+    <nav className="sticky top-0 z-50 bg-surface/80 backdrop-blur-md border-b border-ink/5">
+      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="#home" className="flex items-center gap-3">
+          <img src="/logo.png" alt="Dewandra Logo" className="h-8 w-8 rounded-md object-cover" />
+          <span className="font-extrabold tracking-tighter text-lg">DEWANDRA<span className="text-brand">.</span></span>
+        </a>
+        <div className="flex items-center gap-4 md:gap-6">
+          <ThemeToggle />
+          <div className="hidden md:flex items-center gap-2">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            <span className="text-[11px] font-mono uppercase tracking-wider text-ink/60">Freelance dibuka</span>
+          </div>
+          <a href="#kontak" className="bg-ink text-surface px-4 py-1.5 rounded-full text-sm font-medium hover:bg-brand transition-colors">Kontak</a>
+        </div>
       </div>
-
-      <ul className="hidden md:flex space-x-8 items-center">
-        {items.map((i) => (
-          <li key={i.id} className="capitalize font-body font-medium text-text-light hover:text-primary-accent cursor-pointer transition-colors duration-300">
-            <a href={i.link}>{i.item}</a>
-          </li>
-        ))}
-      </ul>
-
-      <div
-        onClick={() => setNav(!nav)}
-        className="cursor-pointer text-text-light pr-4 hover:text-primary-accent duration-200 md:hidden z-50"
-      >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
-      </div>
-
-      {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-background text-text-light space-y-8 z-40">
-          {items.map((i) => (
-            <li key={i.id} onClick={() => setNav(false)} className="text-2xl capitalize font-body font-medium transition duration-300 hover:text-primary-accent cursor-pointer">
-              <a href={i.link}>{i.item}</a>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+    </nav>
   );
-};
-
-export default Navbar;
+}
